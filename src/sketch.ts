@@ -1,7 +1,9 @@
 import p5 from 'p5';
-import { p5asciify } from 'p5.asciify';
+import { p5asciify, renderers } from 'p5.asciify';
 
 const sketch = new p5((p) => {
+
+    let brightnessRenderer: renderers.renderer2d.feature.P5AsciifyBrightnessRenderer;
 
     p.setup = () => {
         p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
@@ -16,7 +18,9 @@ const sketch = new p5((p) => {
     };
 
     p.setupAsciify = () => {
-        p5asciify.asciifier().renderers().get("brightness").update({
+        brightnessRenderer = p5asciify.asciifier().renderers().get("brightness") as renderers.renderer2d.feature.P5AsciifyBrightnessRenderer;
+
+        brightnessRenderer.update({
             characters: " .,:;i1tfLCG08@",
             invertMode: false,
         });
