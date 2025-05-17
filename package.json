@@ -1,7 +1,7 @@
 {
   "name": "p5.asciify-vite-template-ts",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,11 +9,12 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/p5": "^1.7.6",
     "typescript": "~5.7.2",
     "vite": "^6.3.1"
   },
   "dependencies": {
-    "p5": ">=1.8.0 <2.0.0",
-    "p5.asciify": "^0.8.2"
+    "p5": "^1.8.0",
+    "p5.asciify": "^0.9.5"
   }
 }
